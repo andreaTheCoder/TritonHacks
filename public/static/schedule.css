@@ -18,17 +18,26 @@
 
 .schedule-title {
     font-family: 'Fredoka One', 'Poppins', cursive;
-    font-size: 3.5rem;
+    font-size: 4rem;
     text-align: center;
-    background: linear-gradient(135deg, #FFB6C1, #FFD700, #87CEEB, #DDA0DD);
+    background: linear-gradient(135deg, #FFB6C1 0%, #FFD700 25%, #87CEEB 50%, #DDA0DD 75%, #FF69B4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: none;
-    margin-bottom: 2rem;
-    animation: bounce 2s ease-in-out infinite;
-    letter-spacing: 2px;
-    font-weight: 900;
+    margin-bottom: 3rem;
+    animation: glow 2.5s ease-in-out infinite;
+    letter-spacing: 3px;
+    font-weight: 1000;
+    text-transform: uppercase;
+}
+
+@keyframes glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(255, 182, 193, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(255, 182, 193, 0.8));
+    }
 }
 
 @keyframes bounce {
@@ -36,156 +45,103 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-20px);
     }
-}
-
-/* Decorative grid - 4x2 layout */
-.decorative-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin: 3rem auto;
-    max-width: 600px;
-    padding: 2rem;
-    background: linear-gradient(135deg, rgba(255, 182, 193, 0.1), rgba(135, 206, 235, 0.1));
-    border: 4px dashed;
-    border-image: linear-gradient(135deg, #FFB6C1, #FFD700, #87CEEB, #DDA0DD) 1;
-    border-radius: 30px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1),
-                inset 0 0 30px rgba(255, 255, 255, 0.2);
-}
-
-.shape {
-    font-size: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: bounce 1.5s ease-in-out infinite;
-    text-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.15));
-}
-
-.circle-shape {
-    animation-delay: 0s;
-}
-
-.star-shape {
-    animation-delay: 0.15s;
-}
-
-.heart-shape {
-    animation-delay: 0.3s;
-}
-
-.cloud-shape {
-    animation-delay: 0.45s;
-}
-
-.triangle-shape {
-    animation-delay: 0.6s;
-}
-
-.square-shape {
-    animation-delay: 0.75s;
-}
-
-.pentagon-shape {
-    animation-delay: 0.9s;
-}
-
-.hexagon-shape {
-    animation-delay: 1.05s;
 }
 
 /* Schedule Grid */
 .schedule-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    gap: 2.8rem;
     margin: 3rem 0;
 }
 
 .subject-section {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    padding: 1.2rem;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-    border: 3px solid;
-    border-radius: 25px;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    border-radius: 0;
     transition: all 0.3s ease;
 }
 
 .subject-section:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.12);
 }
 
 .subject-label {
     font-family: 'Fredoka', 'Poppins', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 900;
-    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 1000;
+    padding: 1.2rem 1.5rem;
     border-radius: 20px;
     text-align: center;
     color: white;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    letter-spacing: 1px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    letter-spacing: 1.2px;
+    border: 5px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 
+                inset 0 0 20px rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
 }
 
 .subject-label:hover {
-    transform: scale(1.05);
+    transform: scale(1.08) rotate(-2deg);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25), 
+                inset 0 0 25px rgba(255, 255, 255, 0.4);
 }
 
 /* Subject label colors */
 .math-label {
     background: linear-gradient(135deg, #FFB6C1, #FF69B4);
-    box-shadow: 0 8px 20px rgba(255, 107, 157, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.45), inset 0 0 20px rgba(255, 255, 255, 0.3);
     border-color: #FFB6C1;
 }
 
 .english-label {
     background: linear-gradient(135deg, #FFD700, #FFA500);
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.45), inset 0 0 20px rgba(255, 255, 255, 0.3);
     border-color: #FFD700;
 }
 
 .science-label {
     background: linear-gradient(135deg, #87CEEB, #00BFFF);
-    box-shadow: 0 8px 20px rgba(77, 150, 255, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(135, 206, 235, 0.45), inset 0 0 20px rgba(255, 255, 255, 0.3);
     border-color: #87CEEB;
 }
 
 .history-label {
     background: linear-gradient(135deg, #DDA0DD, #DA70D6);
-    box-shadow: 0 8px 20px rgba(157, 78, 221, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(221, 160, 221, 0.45), inset 0 0 20px rgba(255, 255, 255, 0.3);
     border-color: #DDA0DD;
 }
 
 .arts-label {
     background: linear-gradient(135deg, #FFB6E1, #FF69B4);
-    box-shadow: 0 8px 20px rgba(255, 107, 157, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.45), inset 0 0 20px rgba(255, 255, 255, 0.3);
     border-color: #FFB6E1;
 }
 
 .pe-label {
     background: linear-gradient(135deg, #98D8C8, #6EE7DE);
-    box-shadow: 0 8px 20px rgba(0, 206, 209, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(152, 216, 200, 0.45), inset 0 0 20px rgba(255, 255, 255, 0.3);
     border-color: #98D8C8;
 }
 
 .tech-label {
     background: linear-gradient(135deg, #90EE90, #7FD87F);
-    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(144, 238, 144, 0.45), inset 0 0 20px rgba(255, 255, 255, 0.3);
     border-color: #90EE90;
 }
 
 .electives-label {
     background: linear-gradient(135deg, #FFD580, #FFB366);
-    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(255, 213, 128, 0.45), inset 0 0 20px rgba(255, 255, 255, 0.3);
     border-color: #FFD580;
 }
 
