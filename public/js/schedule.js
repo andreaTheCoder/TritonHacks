@@ -1,16 +1,23 @@
 function saveSchedule() {
-    const classes = [];
-    document.querySelectorAll('.class-card').forEach(card => {
-        classes.push({
-            name: card.querySelector('h3').textContent,
-            icon: card.querySelector('.class-icon').textContent,
-            type: card.querySelector('.class-type').textContent
-        });
+    const schedule = [];
+    document.querySelectorAll('.schedule-dropdown').forEach(dropdown => {
+        const selectedOption = dropdown.options[dropdown.selectedIndex];
+        if (selectedOption.value) {
+            schedule.push({
+                subject: dropdown.dataset.subject,
+                class: selectedOption.textContent
+            });
+        }
     });
+
+    if (schedule.length === 0) {
+        alert('Please select at least one class before saving!');
+        return;
+    }
 
     const scheduleData = {
         saved_at: new Date().toLocaleString(),
-        classes: classes
+        classes: schedule
     };
 
     const dataStr = JSON.stringify(scheduleData, null, 2);
