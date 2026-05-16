@@ -240,118 +240,134 @@
 
 .schedule-dropdown {
     width: 100%;
-    padding: 1rem;
-    font-family: 'Fredoka', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    border: 3px solid;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.95);
+    padding: 1.1rem 1.2rem;
+    font-family: 'Fredoka', 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border: 4px solid;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 250, 250, 0.95));
     color: #333;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     appearance: none;
-    padding-right: 2.5rem;
+    padding-right: 2.8rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-dropdown option {
+    font-family: 'Fredoka', 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 0.8rem;
 }
 
 /* Color borders for dropdowns */
 .math-wrapper .schedule-dropdown {
-    border-color: #FF6B9D;
-    box-shadow: 0 5px 15px rgba(255, 107, 157, 0.2);
+    border-color: #FFB6C1;
+    box-shadow: 0 8px 20px rgba(255, 107, 157, 0.25);
 }
 
 .english-wrapper .schedule-dropdown {
     border-color: #FFD700;
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.25);
 }
 
 .science-wrapper .schedule-dropdown {
-    border-color: #4D96FF;
-    box-shadow: 0 5px 15px rgba(77, 150, 255, 0.2);
+    border-color: #87CEEB;
+    box-shadow: 0 8px 20px rgba(135, 206, 235, 0.25);
 }
 
 .history-wrapper .schedule-dropdown {
-    border-color: #9D4EDD;
-    box-shadow: 0 5px 15px rgba(157, 78, 221, 0.2);
+    border-color: #DDA0DD;
+    box-shadow: 0 8px 20px rgba(221, 160, 221, 0.25);
 }
 
 .arts-wrapper .schedule-dropdown {
-    border-color: #FF1493;
-    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.2);
+    border-color: #FFB6E1;
+    box-shadow: 0 8px 20px rgba(255, 182, 225, 0.25);
 }
 
 .pe-wrapper .schedule-dropdown {
-    border-color: #00CED1;
-    box-shadow: 0 5px 15px rgba(0, 206, 209, 0.2);
+    border-color: #98D8C8;
+    box-shadow: 0 8px 20px rgba(152, 216, 200, 0.25);
 }
 
 .tech-wrapper .schedule-dropdown {
-    border-color: #00FF00;
-    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
+    border-color: #90EE90;
+    box-shadow: 0 8px 20px rgba(144, 238, 144, 0.25);
 }
 
 .electives-wrapper .schedule-dropdown {
-    border-color: #FF8C00;
-    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.2);
+    border-color: #FFD580;
+    box-shadow: 0 8px 20px rgba(255, 213, 128, 0.25);
 }
 
 .schedule-dropdown:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 .schedule-dropdown:focus {
     outline: none;
-    transform: translateY(-2px) scale(1.02);
+    transform: translateY(-3px) scale(1.03);
 }
 
 .schedule-dropdown:focus-visible {
-    outline: 3px dashed rgba(255, 255, 255, 0.5);
+    outline: 4px solid rgba(255, 255, 255, 0.6);
     outline-offset: 2px;
+}
 }
 
 /* Custom dropdown arrow */
 .dropdown-wrapper::after {
-    content: '▼';
+    content: '✨';
     position: absolute;
-    right: 1rem;
+    right: 1.2rem;
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-size: 1.2rem;
+    animation: twinkle 1.5s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; transform: translateY(-50%) scale(1); }
+    50% { opacity: 0.6; transform: translateY(-50%) scale(1.2); }
 }
 
 .math-wrapper::after {
-    color: #FF6B9D;
+    content: '💖';
 }
 
 .english-wrapper::after {
+    content: '✨';
     color: #FFD700;
 }
 
 .science-wrapper::after {
-    color: #4D96FF;
+    content: '🧪';
 }
 
 .history-wrapper::after {
-    color: #9D4EDD;
+    content: '📖';
 }
 
 .arts-wrapper::after {
-    color: #FF1493;
+    content: '🎨';
 }
 
 .pe-wrapper::after {
-    color: #00CED1;
+    content: '⚽';
 }
 
 .tech-wrapper::after {
-    color: #00FF00;
+    content: '💻';
 }
 
 .electives-wrapper::after {
-    color: #FF8C00;
+    content: '⭐';
+    color: #FFD700;
 }
 
 /* Back button */
