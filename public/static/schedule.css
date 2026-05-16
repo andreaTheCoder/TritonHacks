@@ -139,7 +139,7 @@
 /* Classes Grid */
 .classes-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin: 3rem 0;
     justify-items: center;
@@ -241,13 +241,34 @@
     background: white;
 }
 
+@media (max-width: 1024px) {
+    .classes-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .class-card {
+        width: 160px;
+        height: 200px;
+        padding: 1rem;
+    }
+
+    .class-icon {
+        font-size: 3rem;
+    }
+
+    .class-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .schedule-title {
         font-size: 2rem;
     }
 
     .classes-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
 
