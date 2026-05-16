@@ -3,19 +3,143 @@
     <script src="/js/schedule.js"></script>
     <div class="schedule-container">
         <h1 class="schedule-title">📚 1 Year Schedule 📚</h1>
-        
-        <div class="decorative-grid">
-            <div class="shape circle-shape">🌸</div>
-            <div class="shape star-shape">⭐</div>
-            <div class="shape heart-shape">💖</div>
-            <div class="shape cloud-shape">☁️</div>
-            <div class="shape triangle-shape">🎨</div>
-            <div class="shape square-shape">🎁</div>
-            <div class="shape pentagon-shape">🌈</div>
-            <div class="shape hexagon-shape">✨</div>
-        </div>
 
         <div class="schedule-grid">
+            <!-- Math Dropdown -->
+            <div class="subject-section">
+                <label for="math-dropdown" class="subject-label math-label">📐 Classes for Math</label>
+                <div class="dropdown-wrapper math-wrapper">
+                    <select id="math-dropdown" class="schedule-dropdown" data-subject="math">
+                        <option value="">Choose a class...</option>
+                        <option value="algebra-1">Algebra I - Normal Class</option>
+                        <option value="geometry">Geometry - Normal Class</option>
+                        <option value="algebra-2">Algebra II - Honors Class 🏆</option>
+                        <option value="precalc">Pre-Calculus - AP Class 📍</option>
+                        <option value="calculus">Calculus - AP Class 📍</option>
+                        <option value="statistics">Statistics - Online Class 💻</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- English Dropdown -->
+            <div class="subject-section">
+                <label for="english-dropdown" class="subject-label english-label">📖 Classes for English</label>
+                <div class="dropdown-wrapper english-wrapper">
+                    <select id="english-dropdown" class="schedule-dropdown" data-subject="english">
+                        <option value="">Choose a class...</option>
+                        <option value="english-9">English 9 - Normal Class</option>
+                        <option value="english-10">English 10 - Normal Class</option>
+                        <option value="honors-english-11">Honors English 11 - Honors Class 🏆</option>
+                        <option value="ap-literature">AP Literature & Composition - AP Class 📍</option>
+                        <option value="ap-language">AP Language & Composition - AP Class 📍</option>
+                        <option value="creative-writing">Creative Writing - Elective 🎨</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Science Dropdown -->
+            <div class="subject-section">
+                <label for="science-dropdown" class="subject-label science-label">🧪 Classes for Science</label>
+                <div class="dropdown-wrapper science-wrapper">
+                    <select id="science-dropdown" class="schedule-dropdown" data-subject="science">
+                        <option value="">Choose a class...</option>
+                        <option value="biology">Biology - Normal Class</option>
+                        <option value="honors-biology">Honors Biology - Honors Class 🏆</option>
+                        <option value="chemistry">Chemistry - Normal Class</option>
+                        <option value="ap-chem">AP Chemistry - AP Class 📍</option>
+                        <option value="physics">Physics - Normal Class</option>
+                        <option value="ap-physics">AP Physics - AP Class 📍</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- History Dropdown -->
+            <div class="subject-section">
+                <label for="history-dropdown" class="subject-label history-label">🌍 Classes for History</label>
+                <div class="dropdown-wrapper history-wrapper">
+                    <select id="history-dropdown" class="schedule-dropdown" data-subject="history">
+                        <option value="">Choose a class...</option>
+                        <option value="world-history">World History - Normal Class</option>
+                        <option value="us-history">US History - Normal Class</option>
+                        <option value="honors-us-history">Honors US History - Honors Class 🏆</option>
+                        <option value="ap-us-history">AP US History - AP Class 📍</option>
+                        <option value="ap-european">AP European History - AP Class 📍</option>
+                        <option value="government">Government - Normal Class</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Arts Dropdown -->
+            <div class="subject-section">
+                <label for="arts-dropdown" class="subject-label arts-label">🎨 Classes for Arts</label>
+                <div class="dropdown-wrapper arts-wrapper">
+                    <select id="arts-dropdown" class="schedule-dropdown" data-subject="arts">
+                        <option value="">Choose a class...</option>
+                        <option value="painting">Painting - Elective 🎨</option>
+                        <option value="drawing">Drawing - Elective 🎨</option>
+                        <option value="sculpture">Sculpture - Elective 🎨</option>
+                        <option value="pottery">Pottery - Elective 🎨</option>
+                        <option value="digital-art">Digital Art - Online Class 💻</option>
+                        <option value="photography">Photography - Elective 🎨</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Physical Education Dropdown -->
+            <div class="subject-section">
+                <label for="pe-dropdown" class="subject-label pe-label">⚽ Classes for Physical Education</label>
+                <div class="dropdown-wrapper pe-wrapper">
+                    <select id="pe-dropdown" class="schedule-dropdown" data-subject="pe">
+                        <option value="">Choose a class...</option>
+                        <option value="pe-general">Physical Education - Normal Class</option>
+                        <option value="basketball">Basketball - Elective 🎨</option>
+                        <option value="volleyball">Volleyball - Elective 🎨</option>
+                        <option value="soccer">Soccer - Elective 🎨</option>
+                        <option value="tennis">Tennis - Elective 🎨</option>
+                        <option value="strength">Strength & Conditioning - Normal Class</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Technology/Computer Science Dropdown -->
+            <div class="subject-section">
+                <label for="tech-dropdown" class="subject-label tech-label">💻 Classes for Technology</label>
+                <div class="dropdown-wrapper tech-wrapper">
+                    <select id="tech-dropdown" class="schedule-dropdown" data-subject="tech">
+                        <option value="">Choose a class...</option>
+                        <option value="computer-science">Computer Science - Normal Class</option>
+                        <option value="web-dev">Web Development - Online Class 💻</option>
+                        <option value="ap-csp">AP Computer Science Principles - AP Class 📍</option>
+                        <option value="ap-csA">AP Computer Science A - AP Class 📍</option>
+                        <option value="cybersecurity">Cybersecurity - Online Class 💻</option>
+                        <option value="game-dev">Game Development - Elective 🎨</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Electives Dropdown -->
+            <div class="subject-section">
+                <label for="electives-dropdown" class="subject-label electives-label">⭐ Classes for Electives</label>
+                <div class="dropdown-wrapper electives-wrapper">
+                    <select id="electives-dropdown" class="schedule-dropdown" data-subject="electives">
+                        <option value="">Choose a class...</option>
+                        <option value="music">Music - Elective 🎨</option>
+                        <option value="band">Band - Elective 🎨</option>
+                        <option value="choir">Choir - Elective 🎨</option>
+                        <option value="theater">Theater - Elective 🎨</option>
+                        <option value="journalism">Journalism - Elective 🎨</option>
+                        <option value="debate">Debate - Elective 🎨</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button class="save-button" onclick="saveSchedule()">💾 Save Schedule</button>
+            <a href="/" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+{% endblock %}
             <!-- Math Dropdown -->
             <div class="subject-section">
                 <label for="math-dropdown" class="subject-label math-label">📐 Classes for Math</label>
