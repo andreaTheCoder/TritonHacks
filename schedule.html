@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block body %}
+    <script src="/js/schedule.js"></script>
     <div class="schedule-container">
         <h1 class="schedule-title">📚 1 Year Schedule 📚</h1>
         
@@ -62,6 +63,9 @@
             </div>
         </div>
 
-        <a href="/" class="back-button">← Back to Home</a>
+        <div class="button-group">
+            <button class="save-button" onclick="saveSchedule()">💾 Save Schedule</button>
+            <a href="/" class="back-button">← Back to Home</a>
+        </div>
     </div>
 {% endblock %}
