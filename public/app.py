@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request
-import webbrowser
+import csv
 
 app = Flask(__name__)
+
+file = open("static/classes.csv", mode = "r")
+
+classes = csv.reader(file)
 
 @app.route("/")
 def index():
@@ -11,4 +15,4 @@ def index():
 
 @app.route("/schedule")
 def schedule():
-    return render_template("schedule.html")
+    return render_template("schedule.html", classes = classes)
