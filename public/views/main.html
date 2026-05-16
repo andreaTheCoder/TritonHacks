@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photogallery</title>
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Protest+Riot&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <script src="/public/js/main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="createImage">
+            <h2>Create a New Image</h2>
+            <form id="createForm">
+                <input type="text" id="createImgTitle" placeholder="Title">
+                <textarea id="createImgDescription" placeholder="Description" rows="4" cols="20"></textarea>
+                <input type="text" id="createImgSrc" placeholder="Image Source URL">
+                <input type="submit" class="submit" value="Create Image">
+            </form>
+        </div>
+        
+        <div id="imagesList">
+            {% for img_id, img_data in images.items() %}
+            <div class="imageForm">
+                <figure data-img-id="{{ img_id }}">
+                    <div class="pin"></div>
+                    <img src="{{ img_data.src }}" alt="{{ img_data.title }}">
+                    <figcaption>
+                        <p>{{ img_data.title }}</p>
+                        <p>{{ img_data.description }}</p>
+                        <div class="buttons">
+                            <button type="button" class="modifyBtn">Modify</button>
+                            <button type="button" class="deleteBtn">Delete</button>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
