@@ -469,8 +469,7 @@ h1 {
     font-size: 1.2rem;
     font-family: 'Fredoka', 'Poppins', sans-serif;
     font-weight: 900;
-    border: 5px dashed;
-    border-image: linear-gradient(135deg, #FFB6C1, #FFD700, #87CEEB, #DDA0DD) 1;
+    border: 4px solid rgba(255, 255, 255, 0.5);
     background: linear-gradient(135deg, rgba(255, 182, 193, 0.2), rgba(255, 215, 0, 0.2), rgba(135, 206, 235, 0.2), rgba(221, 160, 221, 0.2));
     color: white;
     border-radius: 30px;
