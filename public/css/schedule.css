@@ -1,8 +1,16 @@
 .schedule-container {
     width: 100%;
     max-width: 1200px;
-    padding: 2rem;
-    margin: 0 auto;
+    padding: 2.25rem;
+    margin: 2.5rem auto;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px) saturate(120%);
+    -webkit-backdrop-filter: blur(6px) saturate(120%);
+    position: relative;
+    z-index: 2;
 }
 
 .schedule-title {

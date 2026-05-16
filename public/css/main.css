@@ -128,4 +128,16 @@ h1 {
 
     .button-container {
         gap: 1.5rem;
-    
+    }
+
+    /* Highlight the maker button so the schedule link is obvious */
+    .maker {
+        box-shadow: 0 12px 30px rgba(255, 182, 193, 0.35), 0 6px 12px rgba(255,140,120,0.12) inset;
+        animation: pop 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pop {
+        0%, 100% { transform: translateY(0) scale(1); }
+        50% { transform: translateY(-6px) scale(1.03); }
+    }
+

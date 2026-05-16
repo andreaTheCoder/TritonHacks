@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
-{ % block body %}
+{% block body %}
     <h1>✨ Welcome 8th Graders ✨</h1>
 
     <div class="button-container">
-        <a href="/schedule" style="text-decoration: none;">
-            <button class="cute-btn classes-btn"> Classes Maker 📚</button>
+        <a href="/schedule" class="maker" style="text-decoration: none;">
+            <button class="cute-btn classes-btn maker">Classes Maker 📚</button>
         </a>
-        <button class="cute-btn questions-btn"> Questions ❓</button>
-        <button class="cute-btn clubs-btn"> Clubs Offered 🎭</button>
+        <button class="cute-btn questions-btn">Questions ❓</button>
+        <button class="cute-btn clubs-btn">Clubs Offered 🎭</button>
     </div>
- {% endblock %}
+{% endblock %}
