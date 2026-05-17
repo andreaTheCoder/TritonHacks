@@ -524,10 +524,22 @@ p {
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
-.save-button:active {
+.clubs-btn:active {
     transform: translateY(-2px) scale(0.95);
 }
 
+.clubs-btn:hover::before {
+    left: 100%;
+}
+
+.clubs-btn:hover {
+    transform: translateY(-5px) scale(1.08);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.save-button:active {
+    transform: translateY(-2px) scale(0.95);
+}
 @media (max-width: 1024px) {
     .schedule-grid {
         grid-template-columns: repeat(2, 1fr);
