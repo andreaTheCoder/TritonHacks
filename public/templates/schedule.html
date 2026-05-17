@@ -8,8 +8,17 @@
             <td>
                 <select id="elective-dropdown-1" class="schedule-dropdown">
                     <option value="">Choose a Health Class</option>
-                    <option value="ENS 1-2">ENS 1-2</option>
-                    <option value="ENS 1-2 Online">ENS 1-2 Online</option>
+                    {% if slot1 == "ENS 1-2" %}
+                        <option value="ENS 1-2" selected>ENS 1-2</option>
+                    {% else %}
+                        <option value="ENS 1-2">ENS 1-2</option>
+                    {% endif %}
+
+                    {% if slot1 == "ENS 1-2 Online" %}
+                        <option value="ENS 1-2 Online" selected>ENS 1-2 Online</option>
+                    {% else %}
+                        <option value="ENS 1-2 Online">ENS 1-2 Online</option>
+                    {% endif %}
                 </select>
             </td>
             <td>
@@ -18,6 +27,17 @@
                     <option value="ENS 3-4">ENS 3-4</option>
                     <option value="NJROTC">NJROTC</option>
                     <option value="Marching Band">Marching PE with Band</option>
+                    {% if slot2 == "ENS 3-4" %}
+                        <option value="ENS 3-4" selected>ENS 3-4</option>
+                    {% else %}
+                        <option value="ENS 3-4">ENS 3-4</option>
+                    {% endif %}
+
+                    {% if slot2 == "NJROTC" %}
+                        <option value="NJROTC" selected>NJROTC</option>
+                    {% else %}
+                        <option value="NJROTC">NJROTC</option>
+                    {% endif %}
                 </select>
             </td>
         </tr>
@@ -27,13 +47,28 @@
                     <option value="">Choose an English Class</option>
                     <option value="English 1-2">English 1-2</option>
                     <option value="Honors English 1-2">Honors English 1-2</option>
+                    {% if slot3 == "English 1-2" %}
+                        <option value="English 1-2" selected>English 1-2</option>
+                    {% else %}
+                        <option value="English 1-2">English 1-2</option>
+                    {% endif %}
+
+                    {% if slot3 == "Honors English 1-2" %}
+                        <option value="Honors English 1-2" selected>Honors English 1-2</option>
+                    {% else %}
+                        <option value="Honors English 1-2">Honors English 1-2</option>
+                    {% endif %}
                 </select>
             </td>
             <td>
                 <select id="elective-dropdown-4" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
                     {% for class in classes %}
+                                            {% if slot4 == class[0] %}
+                        <option value="{{ class[0] }}" selected>{{ class[0] }}</option>
+                    {% else %}
                         <option value="{{ class[0] }}">{{ class[0] }}</option>
+                    {% endif %}
                     {% endfor %}
             </td>
         </tr>
@@ -42,7 +77,11 @@
                 <select id="elective-dropdown-5" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
                     {% for class in classes %}
+                    {% if slot5 == class[0] %}
+                        <option value="{{ class[0] }}" selected>{{ class[0] }}</option>
+                    {% else %}
                         <option value="{{ class[0] }}">{{ class[0] }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
             </td>
@@ -50,7 +89,11 @@
                 <select id="elective-dropdown-6" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
                     {% for class in classes %}
+                                            {% if slot6 == class[0] %}
+                        <option value="{{ class[0] }}" selected>{{ class[0] }}</option>
+                    {% else %}
                         <option value="{{ class[0] }}">{{ class[0] }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
             </td>
@@ -60,7 +103,11 @@
                 <select id="elective-dropdown-7" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
                     {% for class in classes %}
+                                            {% if slot7 == class[0] %}
+                        <option value="{{ class[0] }}" selected>{{ class[0] }}</option>
+                    {% else %}
                         <option value="{{ class[0] }}">{{ class[0] }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
             </td>
@@ -68,7 +115,11 @@
                 <select id="elective-dropdown-8" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
                     {% for class in classes %}
+                                            {% if slot8 == class[0] %}
+                        <option value="{{ class[0] }}" selected>{{ class[0] }}</option>
+                    {% else %}
                         <option value="{{ class[0] }}">{{ class[0] }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
             </td>
