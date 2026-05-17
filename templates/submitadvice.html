@@ -2,12 +2,15 @@
 {% block body %}
 
     <form action="/submitted" method="get">
+        <div class = "schedule-container">
         <div style = "align-items: stretch;">
             <input autocomplete="off" autofocus name = "advice" placeholder="Advice here" type="text">
         </div>
+        <br><br><br><br>
         <button type="submit" class = "cute-btn">Submit</button>
+        </div>
     </form>
-
-    <a href="/" class="back-button">← Back to Home</a>
-
+    <div class = "button-container">
+        <a href="/" class="back-button">← Back to Home</a>
+    </div>
 {% endblock %}
