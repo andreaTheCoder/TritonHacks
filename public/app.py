@@ -34,3 +34,14 @@ def links():
 def advice():
     return render_template("advice.html", advice_csv = advice_csv)
 
+@app.route("/submitadvice", methods = ["GET", "POST"])
+def submit():
+    if request.method == "GET":
+        return render_template("submitadvice.html")
+    elif request.method == "POST":  
+        return render_template("submitted.html")
+
+@app.route("/submitted")
+def submitted():
+
+    return render_template("submitted.html", confirmation=request.args.get("advice"))
