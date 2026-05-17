@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    {% for quote in advice_csv %}
+        <p>{{ quote[0] }}</p> 
+        <br>
+    {% endfor %}
+    <div class="button-container">
+        <a href="/" class="back-button">← Back to Home</a>
+    </div>
+{% endblock %}

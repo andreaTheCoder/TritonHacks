@@ -7,6 +7,12 @@ file = open("static/classes.csv", mode = "r")
 
 classes = list(csv.reader(file))
 
+file = open("static/advice.csv", mode = "r")
+
+advice_csv = list(csv.reader(file))
+
+for quote in advice:
+    print(quote)
 @app.route("/")
 def index():
     print(request.args.get("name"))
@@ -23,3 +29,9 @@ def schedule():
 @app.route("/links")
 def links():
     return render_template("links.html")
+
+
+@app.route("/advice")
+def advice():
+    return render_template("advice.html", advice_csv = advice_csv)
+
