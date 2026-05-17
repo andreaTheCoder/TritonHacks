@@ -3,17 +3,17 @@
 <script src="/js/schedule.js"></script>
 <div class="schedule-container">
     <h1 class="schedule-title">1 Year Schedule</h1>
-    <table>
+    <table cellpadding = "10" cellspacing = "10">
         <tr>
             <td>
-                <select id="health-dropdown" class="schedule-dropdown">
+                <select id="elective-dropdown-1" class="schedule-dropdown">
                     <option value="">Choose a Health Class</option>
                     <option value="ENS 1-2">ENS 1-2</option>
                     <option value="ENS 1-2 Online">ENS 1-2 Online</option>
                 </select>
             </td>
             <td>
-                <select id="pe-dropdown" class="schedule-dropdown">
+                <select id="elective-dropdown-2" class="schedule-dropdown">
                     <option value="">Choose a PE Credits Class</option>
                     <option value="ENS 3-4">ENS 3-4</option>
                     <option value="NJROTC">NJROTC</option>
@@ -23,12 +23,21 @@
         </tr>
         <tr>
             <td>
-                <select id="english-dropdown" class="schedule-dropdown">
+                <select id="elective-dropdown-3" class="schedule-dropdown">
+                    <option value="">Choose an English Class</option>
+                    <option value="English 1-2">English 1-2</option>
+                    <option value="Honors English 1-2">Honors English 1-2</option>
+                </select>
+            </td>
+            <td>
+                <select id="elective-dropdown-4" class="schedule-dropdown">
+                        <option value="">Choose an Elective</option>
                     {% for class in classes %}
                         <option value="{{ class[0] }}">{{ class[0] }}</option>
                     {% endfor %}
-                </select>
             </td>
+        </tr>
+        <tr>
             <td>
                 <select id="elective-dropdown-5" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
@@ -40,21 +49,8 @@
                     <option value="ap-physics">AP Physics - AP Class 📍</option>
                 </select>
             </td>
-        </tr>
-        <tr>
             <td>
-                <select id="elective-dropdown-4" class="schedule-dropdown">
-                    <option value="">Choose an Elective</option>
-                    <option value="biology">Biology - Normal Class</option>
-                    <option value="honors-biology">Honors Biology - Honors Class 🏆</option>
-                    <option value="chemistry">Chemistry - Normal Class</option>
-                    <option value="ap-chem">AP Chemistry - AP Class 📍</option>
-                    <option value="physics">Physics - Normal Class</option>
-                    <option value="ap-physics">AP Physics - AP Class 📍</option>
-                </select>
-            </td>
-            <td>
-                <select id="elective-dropdown-3" class="schedule-dropdown">
+                <select id="elective-dropdown-6" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
                     <option value="biology">Biology - Normal Class</option>
                     <option value="honors-biology">Honors Biology - Honors Class 🏆</option>
@@ -67,7 +63,7 @@
         </tr>
         <tr>
             <td>
-                <select id="elective-dropdown-2" class="schedule-dropdown">
+                <select id="elective-dropdown-7" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
                     <option value="biology">Biology - Normal Class</option>
                     <option value="honors-biology">Honors Biology - Honors Class 🏆</option>
@@ -78,7 +74,7 @@
                 </select>
             </td>
             <td>
-                <select id="elective-dropdown-1" class="schedule-dropdown">
+                <select id="elective-dropdown-8" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
                     <option value="biology">Biology - Normal Class</option>
                     <option value="honors-biology">Honors Biology - Honors Class 🏆</option>
@@ -92,9 +88,18 @@
     </table>
 
     <div class="button-group">
-        <button class="save-button" onclick="saveSchedule(document.getElementById('elective-dropdown-1').value)">💾 Save Schedule</button>
+        <button class="save-button" onclick="saveSchedule()">💾 Save Schedule</button>
         <a href="/" class="back-button">← Back to Home</a>
     </div>
 </div>
+<script>
+function saveSchedule()
+{
+    for (i = 1; i <= 8; i++)
+    {
+        console.log(document.getElementById('elective-dropdown-' + i).value)
+    }
 
+}
+</script>
 {% endblock %}
