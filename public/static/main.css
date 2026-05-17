@@ -29,7 +29,7 @@ body {
     }
 }
 input {
-  font-size: 30px;
+  font-size: 50px;
   font-size: max(16px, 1em);
   font-family: 'Quicksand';
   padding: 0.25em 0.5em;
@@ -38,7 +38,10 @@ input {
   border-radius: 4px;
 }
 
+a{
 
+  text-decoration: none;
+}
 
 
 h1 {
