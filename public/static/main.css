@@ -28,6 +28,21 @@ body {
         background-position: 0% 50%;
     }
 }
+input {
+  font-size: 50px;
+  font-size: max(16px, 1em);
+  font-family: 'Quicksand';
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+}
+
+a{
+
+  text-decoration: none;
+}
+
 
 h1 {
     font-family: 'Protest Revolution', cursive;

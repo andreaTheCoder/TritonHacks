@@ -47,7 +47,7 @@ def submit():
 
 @app.route("/submitted")
 def submitted():
-    csv_file = open("static/advice.csv", mode="a", newline="")
+    csv_file = open("static/advice.csv", mode="a", newline="\n")
     writer = csv.writer(csv_file)
     writer.writerow([request.args.get("advice")+"\n"])
     csv_file.close()

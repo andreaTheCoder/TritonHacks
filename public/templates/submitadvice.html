@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 {% block body %}
-<p>
-    yippe submit advice here
+
     <form action="/submitted" method="get">
-        <input autocomplete="off" autofocus name = "advice" placeholder="Advice here" type="text">
-        <button type="submit">Submit</button>
+        <div style = "align-items: stretch;">
+            <input autocomplete="off" autofocus name = "advice" placeholder="Advice here" type="text">
+        </div>
+        <button type="submit" class = "cute-btn">Submit</button>
     </form>
-    </p>
+
     <a href="/" class="back-button">← Back to Home</a>
 
 {% endblock %}
