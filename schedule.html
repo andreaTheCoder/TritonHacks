@@ -19,24 +19,39 @@
                     {% else %}
                         <option value="ENS 1-2 Online">ENS 1-2 Online</option>
                     {% endif %}
+
+                    {% if slot1 == "Unified PE 1-2" %}
+                        <option value="Unified PE 1-2" selected>Unified PE 1-2</option>
+                    {% else %}
+                        <option value="Unified PE 1-2">Unified PE 1-2</option>
+                    {% endif %}
                 </select>
             </td>
             <td>
                 <select id="elective-dropdown-2" class="schedule-dropdown">
                     <option value="">Choose a PE Credits Class</option>
-                    <option value="ENS 3-4">ENS 3-4</option>
-                    <option value="NJROTC">NJROTC</option>
-                    <option value="Marching Band">Marching PE with Band</option>
                     {% if slot2 == "ENS 3-4" %}
                         <option value="ENS 3-4" selected>ENS 3-4</option>
                     {% else %}
                         <option value="ENS 3-4">ENS 3-4</option>
                     {% endif %}
 
+                    {% if slot2 == "Marching Band" %}
+                        <option value="Marching Band" selected>Marching PE with Band</option>
+                    {% else %}
+                        <option value="Marching Band">Marching PE with Band</option>
+                    {% endif %}
+
                     {% if slot2 == "NJROTC" %}
                         <option value="NJROTC" selected>NJROTC</option>
                     {% else %}
                         <option value="NJROTC">NJROTC</option>
+                    {% endif %}
+
+                    {% if slot2 == "OCIS" %}
+                        <option value="OCIS" selected>OCIS</option>
+                    {% else %}
+                        <option value="OCIS">OCIS</option>
                     {% endif %}
                 </select>
             </td>
@@ -45,8 +60,6 @@
             <td>
                 <select id="elective-dropdown-3" class="schedule-dropdown">
                     <option value="">Choose an English Class</option>
-                    <option value="English 1-2">English 1-2</option>
-                    <option value="Honors English 1-2">Honors English 1-2</option>
                     {% if slot3 == "English 1-2" %}
                         <option value="English 1-2" selected>English 1-2</option>
                     {% else %}
