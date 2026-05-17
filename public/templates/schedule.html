@@ -101,7 +101,7 @@
 <script>
 function CopySchedule()
 {
-    text = "/schedule"
+    text = "http://127.0.0.1:5000/schedule?"
     for (i = 1; i <= 8; i++)
     {
         if (i != 1) {text += "&"}
@@ -109,6 +109,7 @@ function CopySchedule()
         text += document.getElementById('elective-dropdown-' + i).value
     }
     navigator.clipboard.writeText(text);
+    
     try {
         navigator.clipboard.writeText(text);
     }
