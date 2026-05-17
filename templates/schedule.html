@@ -215,7 +215,7 @@ function CopySchedule()
     setTimeout(() => {
         document.getElementById('save-btn').innerHTML = "Copy Schedule";
     }, 2000);
-    text = "http://127.0.0.1:5000/schedule?"
+    text = window.location.host + "/schedule?"
     for (i = 1; i <= 8; i++)
     {
         if (i != 1) {text += "&"}
