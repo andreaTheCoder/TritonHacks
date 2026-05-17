@@ -49,6 +49,6 @@ def submit():
 def submitted():
     csv_file = open("static/advice.csv", mode="a", newline="\n")
     writer = csv.writer(csv_file)
-    writer.writerow([request.args.get("advice")+"\n"])
+    writer.writerow([request.args.get("advice") + "," + request.args.get("name")+ "\n"])
     csv_file.close()
-    return render_template("submitted.html", confirmation=request.args.get("advice"))
+    return render_template("submitted.html", confirmation=request.args.get("advice"), name=request.args.get("name"))

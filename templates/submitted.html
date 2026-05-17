@@ -1,8 +1,12 @@
 {% extends "layout.html" %}
 {% block body %}
-<p>
-    submitted {{ confirmation }}
-    </p>
-        <a href="/" class="back-button">← Back to Home</a>
+{% if name == "" %}
+    <p>submitted {{ confirmation }}</p>
+{% else %}
+    <p>submitted {{ confirmation }} by {{ name }}</p>
+{% endif %}
 
+<div class = "button-container">
+<a href="/advice" class="back-button">← Back to Advice Page</a>
+</div>
 {% endblock %}

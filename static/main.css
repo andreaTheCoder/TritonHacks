@@ -16,7 +16,10 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+textarea {
+    resize: none;
+    width: 100%;
+}
 @keyframes gradientShift {
     0% {
         background-position: 0% 50%;
@@ -178,7 +181,9 @@ p {
 }
 .schedule-container {
     width: 100%;
-    max-width: 1200px;
+    height: 70%;
+    /* max-width: 1500px;
+    max-height: 1200px; */
     padding: 2.25rem;
     margin: 2.5rem auto;
     background: linear-gradient(135deg, rgba(255, 182, 193, 0.15), rgba(255, 218, 185, 0.15), rgba(200, 162, 200, 0.15));
