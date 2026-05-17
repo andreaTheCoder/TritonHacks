@@ -11,8 +11,7 @@ file = open("static/advice.csv", mode = "r")
 
 advice_csv = list(csv.reader(file))
 
-for quote in advice:
-    print(quote)
+
 @app.route("/")
 def index():
     print(request.args.get("name"))
