@@ -29,7 +29,6 @@ def schedule():
 def links():
     return render_template("links.html")
 
-
 @app.route("/advice")
 def advice():
     file = open("static/advice.csv", mode = "r")
