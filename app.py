@@ -33,7 +33,6 @@ def links():
 @app.route("/advice")
 def advice():
     file = open("static/advice.csv", mode = "r")
-
     advice_csv = list(csv.reader(file))
     file.close()
     return render_template("advice.html", advice_csv = advice_csv)
@@ -49,6 +48,6 @@ def submit():
 def submitted():
     csv_file = open("static/advice.csv", mode="a", newline="\n")
     writer = csv.writer(csv_file)
-    writer.writerow([request.args.get("advice") + "," + request.args.get("name")+ "\n"])
+    writer.writerow([request.args.get("advice"), request.args.get("name")+ "\n"])
     csv_file.close()
     return render_template("submitted.html", confirmation=request.args.get("advice"), name=request.args.get("name"))

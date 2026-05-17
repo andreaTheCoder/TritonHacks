@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block body %}
+    </div>
     <div class="button-container">
         <a href="/" class="back-button">← Back to Home</a>
     </div>
@@ -14,8 +15,11 @@
         <a href="/submitadvice" class="cute-btn classes-btn">Post advice here!</a>
     </div>
     {% for quote in advice_csv %}
-        <p>{{ quote[0] }}</p>
+        {% if quote[1] == "" %}
+            <p>{{ quote[0] }}</p>
+        {% else %}
+            <p>{{ quote[1] }}: {{ quote[0] }}</p>
+        {% endif %}
         <br>
     {% endfor %}
-]
 {% endblock %}

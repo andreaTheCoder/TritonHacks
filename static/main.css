@@ -16,6 +16,9 @@ body {
     align-items: center;
     justify-content: center;
 }
+table {
+    width: 100%;
+}
 textarea {
     resize: none;
     width: 100%;
@@ -180,7 +183,7 @@ p {
     }
 }
 .schedule-container {
-    width: 100%;
+    width: 90%;
     height: 70%;
     /* max-width: 1500px;
     max-height: 1200px; */
