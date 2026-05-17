@@ -31,7 +31,7 @@
             </td>
             <td>
                 <select id="elective-dropdown-4" class="schedule-dropdown">
-                        <option value="">Choose an Elective</option>
+                    <option value="">Choose an Elective</option>
                     {% for class in classes %}
                         <option value="{{ class[0] }}">{{ class[0] }}</option>
                     {% endfor %}
@@ -41,23 +41,17 @@
             <td>
                 <select id="elective-dropdown-5" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
-                    <option value="biology">Biology - Normal Class</option>
-                    <option value="honors-biology">Honors Biology - Honors Class 🏆</option>
-                    <option value="chemistry">Chemistry - Normal Class</option>
-                    <option value="ap-chem">AP Chemistry - AP Class 📍</option>
-                    <option value="physics">Physics - Normal Class</option>
-                    <option value="ap-physics">AP Physics - AP Class 📍</option>
+                    {% for class in classes %}
+                        <option value="{{ class[0] }}">{{ class[0] }}</option>
+                    {% endfor %}
                 </select>
             </td>
             <td>
                 <select id="elective-dropdown-6" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
-                    <option value="biology">Biology - Normal Class</option>
-                    <option value="honors-biology">Honors Biology - Honors Class 🏆</option>
-                    <option value="chemistry">Chemistry - Normal Class</option>
-                    <option value="ap-chem">AP Chemistry - AP Class 📍</option>
-                    <option value="physics">Physics - Normal Class</option>
-                    <option value="ap-physics">AP Physics - AP Class 📍</option>
+                    {% for class in classes %}
+                        <option value="{{ class[0] }}">{{ class[0] }}</option>
+                    {% endfor %}
                 </select>
             </td>
         </tr>
@@ -65,23 +59,17 @@
             <td>
                 <select id="elective-dropdown-7" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
-                    <option value="biology">Biology - Normal Class</option>
-                    <option value="honors-biology">Honors Biology - Honors Class 🏆</option>
-                    <option value="chemistry">Chemistry - Normal Class</option>
-                    <option value="ap-chem">AP Chemistry - AP Class 📍</option>
-                    <option value="physics">Physics - Normal Class</option>
-                    <option value="ap-physics">AP Physics - AP Class 📍</option>
+                    {% for class in classes %}
+                        <option value="{{ class[0] }}">{{ class[0] }}</option>
+                    {% endfor %}
                 </select>
             </td>
             <td>
                 <select id="elective-dropdown-8" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
-                    <option value="biology">Biology - Normal Class</option>
-                    <option value="honors-biology">Honors Biology - Honors Class 🏆</option>
-                    <option value="chemistry">Chemistry - Normal Class</option>
-                    <option value="ap-chem">AP Chemistry - AP Class 📍</option>
-                    <option value="physics">Physics - Normal Class</option>
-                    <option value="ap-physics">AP Physics - AP Class 📍</option>
+                    {% for class in classes %}
+                        <option value="{{ class[0] }}">{{ class[0] }}</option>
+                    {% endfor %}
                 </select>
             </td>
         </tr>
