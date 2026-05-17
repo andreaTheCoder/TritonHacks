@@ -15,7 +15,7 @@ file.close()
 @app.route("/")
 def index():
     print(request.args.get("name"))
-    return render_template("main.html")
+    return render_template("index.html")
 
 
 @app.route("/schedule")
