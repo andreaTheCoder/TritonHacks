@@ -73,7 +73,9 @@ p {
     justify-content: center;
     align-items: center;
 }
-
+.center {
+  text-align: center;
+}
 .cute-btn {
     font-family: 'Protest Riot', cursive;
     font-size: 1.5rem;
