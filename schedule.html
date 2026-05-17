@@ -101,12 +101,12 @@
 <script>
 function CopySchedule()
 {
-    text = ""
+    text = "/schedule"
     for (i = 1; i <= 8; i++)
     {
+        if (i != 1) {text += "&"}
         text += "slot" + i + "="
         text += document.getElementById('elective-dropdown-' + i).value
-        text += "&"
     }
     navigator.clipboard.writeText(text);
     try {
