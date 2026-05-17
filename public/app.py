@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 file = open("static/classes.csv", mode = "r")
 
-classes = csv.reader(file)
+classes = list(csv.reader(file))
 
 @app.route("/")
 def index():
