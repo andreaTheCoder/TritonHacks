@@ -77,7 +77,7 @@
                 <select id="elective-dropdown-4" class="schedule-dropdown">
                     <option value="">Choose an Elective</option>
                     {% for class in classes %}
-                                            {% if slot4 == class[0] %}
+                    {% if slot4 == class[0] %}
                         <option value="{{ class[0] }}" selected>{{ class[0] }}</option>
                     {% else %}
                         <option value="{{ class[0] }}">{{ class[0] }}</option>
